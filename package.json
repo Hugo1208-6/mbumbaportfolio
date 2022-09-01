@@ -1,0 +1,29 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "protfolio": "npm start --prefix protfolio ",
+    "dev": "concurrently \"npm run  server\" \"npm run protfolio \"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix protfolio && npm run build --prefix protfolio ",
+    "start": "node server.js",
+    "build": "react-scripts build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "env-cmd": "^10.1.0",
+    "express": "^4.18.1",
+    "nodemailer": "^6.7.7",
+    "nodemon": "^2.0.19",
+    "react": "^18.2.0",
+    "react-scripts": "^2.1.3"
+  },
+  "keywords": [],
+  "description": ""
+}
